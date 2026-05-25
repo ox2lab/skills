@@ -7,21 +7,26 @@
 
 ## 스킬 설치
 
+`-y(또는 --yes)` 플래그는 모든 확인 옵션을 승인(Yes)으로 넘어갑니다.
+
+`-g`(Global) 옵션을 붙이지 않으면 기본적으로 **Project 범위(로컬 프로젝트 폴더)**에 스킬을 설치하도록 동작합니다.
+
+`--agent universal` 플래그는 대부분의 에이전트가 사용하는 표준 `.agents/skills` 폴더에 설치합니다.
+
 ### 전체 스킬 설치
 프로젝트에 모든 스킬을 설치하려면 아래 명령어를 실행하세요.
-`--agent universal` 플래그는 대부분의 에이전트가 사용하는 표준 `.agents/skills` 폴더에 설치합니다.
 ```bash
-npx skills add ox2lab/skills --skill '*' --agent universal
+npx skills add ox2lab/skills -y --skill '*' --agent universal
 ```
 
 ### 특정 스킬만 설치
 ```bash
-npx skills add ox2lab/skills --skill '스킬 이름' --skill '스킬 이름' --agent universal
+npx skills add ox2lab/skills -y --skill '스킬 이름' --skill '스킬 이름' --agent universal
 ```
 
 ### 예시
 ```bash
-npx skills add ox2lab/skills --skill 'ox2-harness' --skill 'ox2-grill-me' --agent universal
+npx skills add ox2lab/skills -y --skill 'ox2-harness' --skill 'ox2-grill-me' --agent universal
 ```
 
 ## 스킬 업데이트
